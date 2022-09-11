@@ -67,6 +67,9 @@ AB_OTA_PARTITIONS += \
     vbmeta \
     vbmeta_system
 
+#Camera
+TARGET_USES_64BIT_CAMERA := true
+
 # Dynamic Partitions: build fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -167,7 +170,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_USES_PIXEL_POWER_HAL := true
 
 # USB
-PRODUCT_USES_PIXEL_USB_HAL := false
+PRODUCT_USES_PIXEL_USB_HAL := true
 
 $(call inherit-product, device/motorola/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
